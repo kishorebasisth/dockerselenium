@@ -1,0 +1,10 @@
+hub:
+  image: spaniard89/seleniumhub
+  ports: 
+    - "4444:4444"
+firefox:
+  image: spaniard89/seleniumnode
+  links:
+    - hub
+  expose:
+    - "5555"
